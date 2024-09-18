@@ -1,0 +1,90 @@
+/* ProductCard.css */
+.product-card {
+
+  border: 1px solid #ddd;
+  padding: 16px;
+ background: linear-gradient(135deg, #83b0c9, #f4f4f4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.product-rating {
+  font-size: 1rem;
+  color: #ff9900;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  margin-bottom: 15px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+}
+
+.discounted-price,
+.current-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #b12704;
+}
+
+button {
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #ddb347;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Grid layout */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  grid-template-rows: auto; /* Automatically adjusts row height */
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: 1fr; /* One item per row on small screens */
+  }
+}

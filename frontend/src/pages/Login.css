@@ -1,0 +1,116 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Ensure the container takes up the full viewport height and respects the navbar */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh ;
+  background: linear-gradient(135deg, #d8e8c5, #332b7e);
+  padding: 20px;
+  transition: background 0.5s ease;
+  margin-top: 60px; /* Space for navbar */
+}
+
+.auth-container h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+form {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 8px rgba(0, 121, 107, 0.2);
+  outline: none;
+}
+
+button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:last-of-type {
+  background-color: #f5f5f5;
+  color: #00796b;
+  border: 1px solid #00796b;
+  margin-top: 15px;
+}
+
+button:last-of-type:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+  .auth-container {
+    padding: 15px;
+    margin-top: 50px; /* Adjust for smaller screens */
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
