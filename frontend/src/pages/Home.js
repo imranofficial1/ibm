@@ -1,21 +1,21 @@
 
 import React from 'react';
-import './home.css'; 
+import './home.css';
 
 const Home = () => {
   return (
     <div className="home-container">
-      <h1>Welcome to ShoPannu</h1>
-      <p>Your one-stop shop for all things amazing!</p>
+      <h1>Welcome to IMRmart</h1>
+      <p>"Your ultimate destination for everything extraordinary!"</p>
       <div className="quotes-container">
         <div className="quote">
-          <p>Capture every moment with clarity. Our laptop cameras redefine what it means to be seen.</p>
+          <p>Experience the game in stunning detail. Our sports gear elevates your performance to a whole new level.</p>
         </div>
         <div className="quote">
-          <p>Experience the world in high definition. Our laptop cameras bring your virtual meetings to life.</p>
+          <p>Capture every play with precision. Our equipment sets a new standard for excellence and durability.</p>
         </div>
         <div className="quote">
-          <p>See the difference with every detail. Upgrade to our top-of-the-line laptop cameras today!</p>
+          <p>Feel the difference in every move. Upgrade to our top-tier sports gear today for unbeatable performance!</p>
         </div>
       </div>
     </div>

@@ -1,8 +1,7 @@
-
 import React, { useContext, useState } from 'react';
-import { CartContext } from './CartContext'; 
-import './cart.css';
 import { useNavigate } from 'react-router-dom';
+import { CartContext } from './CartContext';
+import './cart.css';
 
 const Cart = () => {
   const { cart, removeFromCart, user } = useContext(CartContext);
@@ -61,9 +60,9 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h1>Shopping Cart</h1>
+      <h1>MY Cart</h1>
       {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p>Cart is Emty! Add any product.</p>
       ) : (
         <ul>
           {cart.map((item) => (
@@ -96,10 +95,9 @@ const Cart = () => {
               Payment Method:
               <select name="paymentMethod" value={formData.paymentMethod} onChange={handleChange} required>
                 <option value="">Select payment method</option>
-                <option value="delivery">Pay on delivery</option>
+                <option value="delivery">Cash on delivery</option>
                 <option value="creditCard">Credit Card</option>
-                <option value="paypal">PayPal</option>
-                {}
+                <option value="paypal">Gpay</option>
               </select>
             </label>
             <button type="submit">Place Order</button>

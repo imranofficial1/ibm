@@ -1,73 +1,75 @@
-/* Reset some default browser styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace; 
 }
 
-/* Ensure the container takes up the full viewport height and respects the navbar */
 .auth-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 80vh ;
-  background: linear-gradient(135deg, #d8e8c5, #332b7e);
+  min-height: 80vh;
+  background: black; 
   padding: 20px;
   transition: background 0.5s ease;
-  margin-top: 60px; /* Space for navbar */
+  margin-top: 60px; 
 }
 
 .auth-container h1 {
   font-size: 2.5rem;
-  color: #fff;
+  color: #00ff00; 
   margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); 
 }
 
 form {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.8); 
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.5); 
   padding: 20px;
   max-width: 400px;
   width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #00ff00; 
 }
 
 form:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.75); 
 }
 
 label {
   display: block;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #333;
+  color: #00ff00; 
 }
 
 input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ddd;
+  background: #000; 
+  border: 1px solid #00ff00; 
   border-radius: 6px;
   font-size: 1rem;
+  color: #00ff00; 
   margin-top: 5px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
-  border-color: #00796b;
-  box-shadow: 0 0 8px rgba(0, 121, 107, 0.2);
+  border-color: #00ff00; 
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.6); 
   outline: none;
 }
 
 button {
-  background-color: #00796b;
-  color: white;
-  border: none;
+  background-color: black; 
+  color: #00ff00; 
+  border: 1px solid #00ff00;
   padding: 12px 20px;
   font-size: 1rem;
   border-radius: 6px;
@@ -76,7 +78,7 @@ button {
 }
 
 button:hover {
-  background-color: #004d40;
+  background-color: #003300; 
   transform: scale(1.05);
 }
 
@@ -85,20 +87,20 @@ button:active {
 }
 
 button:last-of-type {
-  background-color: #f5f5f5;
-  color: #00796b;
-  border: 1px solid #00796b;
+  background-color: #111; 
+  color: #00ff00;
+  border: 1px solid #00ff00;
   margin-top: 15px;
 }
 
 button:last-of-type:hover {
-  background-color: #e0e0e0;
+  background-color: #222; 
 }
 
 @media (max-width: 600px) {
   .auth-container {
     padding: 15px;
-    margin-top: 50px; /* Adjust for smaller screens */
+    margin-top: 50px; 
   }
 
   h1 {

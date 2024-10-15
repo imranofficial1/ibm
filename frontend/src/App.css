@@ -1,26 +1,23 @@
-/* App.css */
-
-/* General Styling */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #f0f2f5;
-  color: #333;
+  background: #0d0d0d; 
+  color: #eee; 
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #9ac68f, #475199);
+  background: linear-gradient(135deg, #005c5c, #8d91de); 
   color: #fff;
   padding: 15px 20px;
   position: sticky;
   top: 0;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2); 
 }
 
 .navbar .logo {
@@ -29,21 +26,23 @@ body {
 }
 
 .navbar .logo a {
-  color: #fff;
+  color: #00ff00; 
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .navbar .logo a:hover {
   color: #e0e0e0;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.7); 
 }
 
 .navbar .search-input {
   padding: 10px;
-  border: 2px solid #fff;
+  border: 2px solid #00ff00; 
   border-radius: 20px;
   width: 250px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #222; 
+  color: #fff; 
   transition: all 0.3s;
   margin-right: 10px;
 }
@@ -51,7 +50,7 @@ body {
 .navbar .search-input:focus {
   outline: none;
   border-color: #00cc99;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.5); 
 }
 
 .navbar .nav-links {
@@ -60,7 +59,7 @@ body {
 }
 
 .navbar .nav-links a {
-  color: #fff;
+  color: #00ff00; 
   text-decoration: none;
   font-size: 1em;
   font-weight: 500;
@@ -74,23 +73,21 @@ body {
 
 main {
   padding: 20px;
-  min-height: calc(100vh - 80px); /* Adjust based on navbar and footer height */
+  min-height: calc(100vh - 80px); 
 }
 
 .footer {
-  background: linear-gradient(135deg, #c0e3a9, #8d91de);
-  color: #fff;
+  background: linear-gradient(135deg, #005c5c, #000);
+  color: #00ff00;
   text-align: center;
   padding: 20px;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -4px 12px #3a3a3a;
 }
 
-.footer p {
-  margin: 0;
-  font-size: 0.9em;
-}
 
-/* Responsive Design */
+
+
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

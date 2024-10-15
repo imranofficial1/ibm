@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import './Login.css';
 
 const Auth = () => {
@@ -11,7 +11,7 @@ const Auth = () => {
     phone: '',
     password: ''
   });
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     setFormData({
@@ -29,7 +29,7 @@ const Auth = () => {
       if (response.status === 200) {
         if (isLogin) {
           alert('Login successful');
-          navigate('/show-now'); // Redirect to the show-now page after successful login
+          navigate('/shop-now'); 
         } else {
           alert('Sign up successful. Redirecting to login page...');
           setTimeout(() => {
@@ -38,7 +38,7 @@ const Auth = () => {
           }, 2000);
         }
       } else {
-        alert(isLogin ? 'Login failed. Please check your credentials.' : 'Sign up successful.');
+        alert(isLogin ? 'Login failed. Please check your credentials.' : 'Sign up failed.');
       }
     } catch (error) {
       if (error.response) {
@@ -53,7 +53,7 @@ const Auth = () => {
 
   return (
     <div className="auth-container">
-      <h1>{isLogin ? 'Login Page' : 'Sign Up Page'}</h1>
+      <h1>{isLogin ? 'User Login Page' : 'User Sign Up Page'}</h1>
       <form onSubmit={handleSubmit}>
         {!isLogin && (
           <label>
@@ -68,7 +68,7 @@ const Auth = () => {
           </label>
         )}
         <label>
-          Email:
+          Email ID:
           <input
             type="email"
             name="email"
@@ -79,7 +79,7 @@ const Auth = () => {
         </label>
         {!isLogin && (
           <label>
-            Phone Number:
+            Mobile Number:
             <input
               type="tel"
               name="phone"
@@ -103,6 +103,11 @@ const Auth = () => {
       </form>
       <button onClick={() => setIsLogin(!isLogin)}>
         {isLogin ? 'Switch to Sign Up' : 'Switch to Login'}
+      </button>
+
+      {/* Admin Login Button */}
+      <button onClick={() => navigate('/admin-login')} className="admin-login-button">
+        Admin Login
       </button>
     </div>
   );

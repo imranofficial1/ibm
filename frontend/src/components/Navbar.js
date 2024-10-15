@@ -6,7 +6,7 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">ShoPannu</div>
+      <div className="navbar-logo">IMRmart</div>
       <div className="navbar-items">
         <input type="text" className="search-input" placeholder="Search Products.." />
         

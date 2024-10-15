@@ -4,7 +4,9 @@ import './ProductCard.css';
 const ProductCard = ({ product, onAddToCart }) => {
   const { name, image, description, rating, cost, discount } = product;
 
-  const discountedPrice = discount ? (cost - (cost * discount / 100)).toFixed(2) : cost.toFixed(2);
+
+  const parsedCost = typeof cost === 'number' ? cost : parseFloat(cost) || 0;
+  const discountedPrice = discount ? (parsedCost - (parsedCost * discount / 100)).toFixed(2) : parsedCost.toFixed(2);
 
   return (
     <div className="product-card">
@@ -15,11 +17,11 @@ const ProductCard = ({ product, onAddToCart }) => {
       <div className="product-price">
         {discount ? (
           <>
-            <span className="original-price">₹{cost.toFixed(2)}</span>
+            <span className="original-price">₹{parsedCost.toFixed(2)}</span>
             <span className="discounted-price">₹{discountedPrice}</span>
           </>
         ) : (
-          <span className="current-price">₹{cost.toFixed(2)}</span>
+          <span className="current-price">₹{parsedCost.toFixed(2)}</span>
         )}
       </div>
       <button onClick={onAddToCart}>Add to Cart</button>

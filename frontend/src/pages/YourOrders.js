@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './yourorder.css'
+import './yourorder.css';
 
 const YourOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -20,9 +20,9 @@ const YourOrders = () => {
 
   return (
     <div className="your-orders">
-      <h1>Your Orders</h1>
+      <h1>My Orders</h1>
       {orders.length === 0 ? (
-        <p>No orders found.</p>
+        <p>There is No orders found in the My order.</p>
       ) : (
         <ul>
           {orders.map((order, index) => (

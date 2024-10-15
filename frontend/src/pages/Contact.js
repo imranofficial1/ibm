@@ -11,7 +11,7 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Form validation function
+
   const validateForm = () => {
     let errors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -31,13 +31,13 @@ const Contact = () => {
     return errors;
   };
 
-  // Handling input change
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handling form submission
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
@@ -56,7 +56,7 @@ const Contact = () => {
           console.log('Contact form submitted successfully');
           setIsSubmitted(true);
           setFormData({ name: '', email: '', message: '' });
-          setTimeout(() => setIsSubmitted(false), 3000); // Reset success message after 3 seconds
+          setTimeout(() => setIsSubmitted(false), 3000);
         } else {
           console.error('Failed to submit the form');
         }
@@ -70,8 +70,8 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <h1>Contact Us</h1>
-      <p>We’d love to hear from you! Please fill out the form below, and we’ll get back to you as soon as possible.</p>
+      <h1>Contact And Feedback</h1>
+      <p>We’d love to connect with you! Fill out the form below, and we’ll respond promptly.</p>
       
       <form onSubmit={handleSubmit} className="contact-form" noValidate>
         <div className="form-group">
